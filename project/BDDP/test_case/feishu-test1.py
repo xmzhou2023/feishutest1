@@ -28,7 +28,7 @@ browser.find_element(By.XPATH, "//div[@title='消息']").click()  # 进入消息
 time.sleep(5)
 browser.find_element(By.XPATH, "//p[normalize-space(text())='test2']").click()  # 找到test2联系人
 browser.find_element(By.XPATH, "//pre[@data-text='发送给 test2']").click()
-browser.find_element(By.XPATH, "//pre[@data-text='发送给 test2']").send_keys('itelsimson2022.') # 发送消息
+browser.find_element(By.XPATH, "//pre[@data-text='发送给 test2']").send_keys('itelsimson2022.') # 输入消息
 time.sleep(2)
 pyautogui.press('Enter')  # 按Enter键发送消息
 
