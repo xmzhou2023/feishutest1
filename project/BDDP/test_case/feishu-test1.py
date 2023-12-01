@@ -14,7 +14,13 @@ browser.maximize_window()  # 浏览器最大化
 browser.get('https://www.feishu.cn/')  # 输入链接
 time.sleep(20)
 
-# browser.find_element(By.XPATH, "//a[normalize-space(text())='登录']").click() # 登录
+browser.find_element(By.XPATH, "//a[normalize-space(text())='登录']").click() # 登录
+browser.find_element(By.XPATH, "//input[@id='account']").click()  # 用户名
+browser.find_element(By.XPATH, "//input[@id='account']").send_keys('test1')
+time.sleep(1)
+browser.find_element(By.XPATH, "//input[@id='password']").click()  # 密码
+browser.find_element(By.XPATH, "//input[@id='password']").send_keys('itelsimson2022.')
+browser.find_element(By.XPATH, "//button[@data-spm='home_next']").click()  # login
 time.sleep(5)
 browser.find_element(By.XPATH, "//div[@class='_pp-product-container']").click() # 点击九点
 time.sleep(2)
